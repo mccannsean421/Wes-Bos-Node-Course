@@ -7,7 +7,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/reverse/:name', (req, res) => {
-  res.send(req.params.name.split('').reverse().join(''));
+  //res.send(req.params.name.split('').reverse().join(''));
+  res.render('hello', {
+    'headingText': 'This is the heading text'
+  });
 });
 
 module.exports = router;
